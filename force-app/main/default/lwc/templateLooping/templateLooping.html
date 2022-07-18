@@ -1,0 +1,87 @@
+<template>
+
+    <lightning-card title="Learning for:each Loop">
+
+        <div class="slds-m-around_medium">
+
+            <ul class="slds-has-dividers_around-space">
+
+                <template for:each={carList} for:item="car" for:index="i">
+
+                <!-- A key needs to be given on the first item , key helps in increasing performance when looping -->
+
+                    <!-- <ul key={car} class="slds-has-dividers_around-space"> -->
+                
+                        <li key={car} class="slds-item">{i}. {car}</li>
+
+                        <!-- 
+                        It's not possible to print the index like index + 1 in html as it's not possible to do 
+                        calculations in lwc html yet
+                        https://salesforce.stackexchange.com/questions/272487/issue-with-foreach-index-in-lwc
+                        -->
+
+                    <!-- </ul> -->
+                
+                </template>
+
+            </ul>
+
+
+        </div>
+
+
+    </lightning-card>
+
+
+    <!-- ------------------------------------------------------------------------------------------------- -->
+
+    <lightning-card title="Learning Iterator Loop">
+
+        <div class="slds-m-around_medium">
+
+            <template iterator:ceo={ceoList}> <!--  Each item in the loop will be called ceo which is an object -->
+
+                <ul key={ceo.value.id} class="slds-has-dividers_around-space">
+
+                    <template if:true={ceo.first}>
+
+                        <div class="slds-box slds-theme_shade">
+                            List of Companiess and their CEOs
+                        </div>
+
+
+                    </template>
+               
+                    
+                    <li class="slds-item">
+                        <strong>{ceo.value.company} </strong>
+                        {ceo.value.name}
+                    </li>
+
+
+                    <!-- 
+                    It's not possible to print the index like index + 1 in html as it's not possible to do 
+                    calculations in lwc html yet
+                    https://salesforce.stackexchange.com/questions/272487/issue-with-foreach-index-in-lwc
+                     -->
+
+
+                     <template if:true={ceo.last}>
+
+                        <div class="slds-box slds-theme_shade">
+                            End of List. Thanks.
+                        </div>
+
+                    </template>
+
+                </ul>
+            
+            </template>
+
+
+        </div>
+
+
+    </lightning-card>
+    
+</template>

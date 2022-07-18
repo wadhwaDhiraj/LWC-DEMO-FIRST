@@ -1,0 +1,46 @@
+<template>
+
+    <lightning-card title = "Conditional Rendering">
+        <div class = "slds-m-around_medium">
+
+            <lightning-button variant="brand" label="Show Data" 
+            title="Show Data" class="slds-m-left x-small"
+            onclick={handleClick}></lightning-button>
+
+            <template if:true={isVisible}>
+                <div  class = "slds-m-around_medium">Welcome to Zero to Hero Series!</div>
+            </template>
+
+            <template if:false={isVisible}>
+                <div  class = "slds-m-around_medium">You can't see the data. Please click the button</div>
+            </template>
+
+            <div class = "slds-m-around_medium"></div>
+
+            <lightning-input 
+            type="text" 
+            label="Type hello to see the Data"  
+            onkeyup={changeHandler}>
+            </lightning-input>
+
+            <template if:true={helloGetMethod}>  <!--Here we are using getter method bcoz we want to get the result of the expression which involves the name property, we want to know the result of the expression when name == hello, and getters-->
+                <div>Great! You typed "hello"</div>
+            </template>
+
+            <lightning-card title="Conditional Rendering">
+                <div class="slds-m-around_medium">
+                    <lightning-input type="checkbox" label="Show Details" onchange={handleChange}>
+                    </lightning-input>
+                    <template if:true={areDetailsVisible}>
+                        <div class="slds-m-vertical_medium">
+                            These Are The Details!!!!!
+                        </div>
+                    </template>
+                </div>
+            </lightning-card>
+
+        </div>
+    </lightning-card>
+    
+    
+</template>

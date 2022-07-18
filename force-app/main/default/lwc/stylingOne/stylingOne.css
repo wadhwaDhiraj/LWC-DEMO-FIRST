@@ -1,0 +1,8 @@
+@import 'c/cssSharedLibrary';
+.css{
+    width:80%;
+    background-color: blue;
+}
+
+/* IF you are facing in deploying this file due to system not being able to find the cssSharedLibrary
+then you just have to make sure to deploy both together, this stylingOne file and the cssSharedLibrary file */

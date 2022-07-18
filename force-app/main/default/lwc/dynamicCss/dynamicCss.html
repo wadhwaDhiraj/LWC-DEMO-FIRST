@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Dynamic CSS">
+        <div class="slds-m-around_medium">
+            <lightning-input type="number" title="Enter Width %" label="Enter Width %" 
+            value={percent} onkeyup={changeHandler}>
+
+            </lightning-input>
+            <div style={widthPercentage}
+            class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error"
+            role="alert">
+                Hey this is an ALERT!
+            </div>
+        </div>
+    </lightning-card>
+</template>

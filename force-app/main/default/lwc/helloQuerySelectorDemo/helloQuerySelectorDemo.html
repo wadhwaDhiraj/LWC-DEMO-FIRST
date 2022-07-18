@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Query Selector">
+        <div class="slds-m-around_medium">
+            <h1>Hey I am Heading. </h1>
+
+            <template for:each={usernames} for:item="user">
+                <div class="name" key={user}>{user}</div>
+            </template>
+
+             <!-- If you have an empty element in HTML and you are planning to add something manually  -->
+             <!-- then it is recommended to use this directive lwc:dom -->
+             <!-- so basically we are saying that it will be accessed in the dom structure manually -->
+
+            <div class="child" lwc:dom="manual"></div> 
+
+           <button onclick={fetchDetailsHandler}>Fetch Details</button>
+        </div>
+    </lightning-card>
+</template>
