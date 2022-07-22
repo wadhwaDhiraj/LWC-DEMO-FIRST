@@ -1,5 +1,6 @@
 <template>
-    <!---Example of Simple Data-->
+    <!---Example of Passing Simple\Primitive Data to the child-->
+
     <c-p2c-child-alert-component
     message="Hurray !! I got the data"
     card-heading="Parent to Child primitive data communication"
@@ -7,13 +8,15 @@
     is-valid
     ></c-p2c-child-alert-component>
 
-     <!---Example of Complex Data-->
+     <!---Example of Passing Complex Data to the child-->
+
     <div class="slds-var-m-bottom_medium"></div>
     <c-p2c-child-carousel-component
      carousel-details={carouselData}>
     </c-p2c-child-carousel-component>
 
-    <!---Example of data passing on action-->
+    <!---Example of data passing on action\btn click-->
+
     <div class="slds-var-m-bottom_medium"></div>
     <lightning-card title="Parent to Child communication on action">
         <div class="slds-var-m-around_medium">
@@ -28,5 +31,16 @@
              ></c-p2c-child-progress-component>
         </div>
     </lightning-card>
+
+    <!-- Example of calling the Child Method from Parent -->
+
+    <div class="slds-var-m-bottom_medium"></div>
+
+    <lightning-button variant="brand" label="Reset Slider" title="Reset Slider" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+
+    <div class="slds-var-m-bottom_medium"></div>
+
+    <c-p2c-child-slider-component></c-p2c-child-slider-component>
+    
     
 </template>

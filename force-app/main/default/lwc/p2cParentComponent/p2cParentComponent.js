@@ -23,4 +23,8 @@ export default class P2cParentComponent extends LightningElement {
     handlechange(event){
         this.percentage = event.target.value
     }
+
+    handleClick(){
+        this.template.querySelector('c-p2c-child-slider-component').resetSlider(50);  
+    }
 }
