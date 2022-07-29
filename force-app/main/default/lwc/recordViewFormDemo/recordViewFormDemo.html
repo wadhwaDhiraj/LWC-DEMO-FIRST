@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Record-View-Form Demo">
+        <lightning-record-view-form object-api-name="Account" record-id="0016D00000dQ7LWQA0">
+
+            <!-- In Record View Form and Record Edit Form, we can customize how we want the fields
+                to display manually, as show below -->
+
+            <div class="slds-grid">
+
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning-output-field field-name="Name"></lightning-output-field>
+                    <lightning-output-field field-name="Phone"></lightning-output-field>
+                    <lightning-output-field field-name="Industry"></lightning-output-field>
+                </div>
+
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning-output-field field-name="AnnualRevenue"></lightning-output-field>
+                </div>
+
+            </div>
+
+
+        </lightning-record-view-form>
+
+        <lightning-button class="slds-m-around_xx-small" 
+        label="Navigate to Record"
+        onclick={navToRecord}
+        ></lightning-button>
+        
+    </lightning-card>
+</template>

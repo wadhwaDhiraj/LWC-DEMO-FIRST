@@ -17,7 +17,10 @@ export default class HelloQuerySelectorDemo extends LightningElement {
             console.log(item.innerText)
 
             // setAttribute is a function specifically used to assign attributes dynamically like this
-            item.setAttribute("title", item.innerText)  
+            // item.setAttribute("title", item.innerText) 
+            // I tried the below on my own, after looking at the above element being styled with a border
+            // and it works... 
+            item.title = item.innerText;
         });
 
         const childElem = this.template.querySelector('.child')

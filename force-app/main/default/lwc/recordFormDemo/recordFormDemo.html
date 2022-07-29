@@ -1,0 +1,50 @@
+<template>
+
+    <lightning-card title="Create record using Lightning Record Form">
+        <lightning-record-form
+            object-api-name={objectName}
+            fields={fieldlist}
+            onsuccess={successHandler}
+        ></lightning-record-form>
+    </lightning-card>
+    
+    <lightning-card title="Display records using Lightning Record Form" class="slds-m-around_medium">
+        <lightning-record-form
+        record-id="0016D00000dQ7LWQA0"
+        object-api-name={objectName}
+        fields={fieldlist}
+        ></lightning-record-form>
+    </lightning-card>
+
+    <lightning-card title="Display record in readonly mode using Lightning Record Form">
+        <lightning-record-form
+        record-id="0016D00000dQ7LWQA0"
+        object-api-name={objectName}
+        fields={fieldlist}
+        mode="readonly"
+        ></lightning-record-form>
+    </lightning-card>
+
+    <lightning-card title="Edit record mode using Lightning Record Form" class="slds-m-around_medium">
+        <lightning-record-form
+        record-id="0016D00000dQ7LWQA0"
+        object-api-name={objectName}
+        fields={fieldlist}
+        mode="edit"
+        columns="2"
+        ></lightning-record-form>
+    </lightning-card>
+
+<!-- Below record form will only work for Record Pages, bcoz App pages don't have record Id -->
+
+    <lightning-card title="Edit record in Compact layout using Lightning Record Form">
+        <lightning-record-form
+        record-id={recordId}
+        object-api-name={objectApiName}
+        mode="edit"
+        columns="2"
+        layout-type="Compact"
+        ></lightning-record-form>
+    </lightning-card>
+
+</template>
