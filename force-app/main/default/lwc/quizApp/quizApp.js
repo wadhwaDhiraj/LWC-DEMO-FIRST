@@ -47,19 +47,18 @@ export default class QuizApp extends LightningElement {
         return !(Object.keys(this.selected).length == this.myQuestions.length)
     }
 
-    get isScoredFull(){
-        return `slds-text-heading_large slds-m-around_medium ${this.myQuestions.length === this.correctAnswers ?
-        'slds-text-color_success':'slds-text-color_error'}`
-    }
+
 
 
     changeHandler(event) {
-        console.log("name", event.target.name)
-        console.log("value", event.target.value)
+        // console.log("name", event.target.name)
+        // console.log("value", event.target.value)
 
         const{name, value} = event.target
 
         this.selected = {...this.selected, [name]:value}
+
+        console.log("this.selected", this.selected)
     }
 
     submitHandler(event){
