@@ -31,7 +31,7 @@ export default class GetPicklistValuesByRecordTypeDemo extends LightningElement 
     }
 
     handleChange(event){
-        const{name, value} = event.target
+        const{name, value} = event.target  // this is a nice trick to remember :)
 
         if(name == 'industry'){
             this.selectedIndustry = value

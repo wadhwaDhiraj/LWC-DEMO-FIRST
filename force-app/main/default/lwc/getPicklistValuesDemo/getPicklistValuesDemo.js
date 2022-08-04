@@ -17,8 +17,9 @@ export default class GetPicklistValuesDemo extends LightningElement {
     industryPicklist({data, error}){
         if(data)
         {
-            // console.log(data)
-            this.industryOptions = [...this.generatePicklist(data)]
+            // we are making a shallow copy bcoz for some reason
+            // we are not supposed to update the property directly 
+            this.industryOptions = [...this.generatePicklist(data)] 
         }
         if(error)
         {
@@ -28,7 +29,7 @@ export default class GetPicklistValuesDemo extends LightningElement {
 
     generatePicklist(data){
         let indusValues = data.values.map(item=>{
-                console.log('Item: ',item)
+                // console.log('Item: ',item)
                 return {label: item.label, value: item.value}        
         })
         return indusValues
@@ -38,7 +39,8 @@ export default class GetPicklistValuesDemo extends LightningElement {
         this.selectedIndustry = event.detail.value;
     }
 
-    @wire(getPicklistValues, {recordTypeId:'$objectInfo.data.defaultRecordTypeId', fieldApiName:TYPE_FIELD})
+    @wire(getPicklistValues, {recordTypeId:'$objectInfo.data.defaultRecordTypeId', 
+                              fieldApiName:TYPE_FIELD})
     typePicklist({data, error}){
         if(data)
         {
