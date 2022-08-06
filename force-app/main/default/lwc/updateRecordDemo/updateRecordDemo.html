@@ -1,0 +1,18 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card title="Update Record Demo">
+        <div class="slds-var-m-around_medium">
+
+             <!-- sldsValidatorIgnoreNextLine -->
+            <lightning-datatable
+                key-field="Id"
+                data={contacts}
+                columns={columns}
+                onsave={handleSave}
+                draft-values={draftValues}
+                hide-checkbox-column="true">
+            </lightning-datatable>
+            
+        </div>
+    </lightning-card>
+</template>
