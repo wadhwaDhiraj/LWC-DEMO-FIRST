@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Lightning Alert Demo">
+
+        <lightning-button title="Success Alert" label="Success Alert" onclick={alertHandler}
+        name="success" variant="success" class="slds-var-m-around_small"></lightning-button>
+        
+        <lightning-button title="Error Alert" label="Error Alert" onclick={alertHandler}
+        name="error" variant="destructive" class="slds-var-m-around_small"></lightning-button>
+
+        <lightning-button title="Warning Alert" label="Warning Alert" onclick={alertHandler}
+        name="warning" class="slds-var-m-around_small slds-button_text-destructive"></lightning-button>
+
+        <br><br>
+
+        <lightning-button title="Default Alert" label="Default Alert" onclick={alertHandler}
+        name="default" variant="neutral" class="slds-var-m-around_small"></lightning-button>
+
+        <lightning-button title="Info Alert" label="Info Alert" onclick={alertHandler}
+        name="info" variant="brand" class="slds-var-m-around_small"></lightning-button>
+
+    </lightning-card>
+</template>
