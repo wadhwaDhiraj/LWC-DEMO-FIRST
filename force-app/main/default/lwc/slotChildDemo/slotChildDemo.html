@@ -1,0 +1,29 @@
+<template>
+    <div class="slds-var-m-around_medium">
+        <div>Hello, this is Child component speaking. What is your name?</div>
+
+        <div>
+            <slot name="firstQuestion"></slot>  <!-- Named Slot -->
+        </div>
+
+        <br>
+
+        <div>Okay, What is your age??</div>
+
+        <div>
+            <slot name="secondQuestion"></slot>  <!-- Named Slot -->
+        </div>
+
+        <!-- If we have a element like the footer one below, in which 
+        the parent is sending data twice (separately) we want to make sure
+        that the element is rendered only when data is present, and we achieve
+        this with the help of onslotchange attribute, where we can manage the
+        visibility of the element using the "slds-hide" property. Amazing.
+        And that's why we keep it hidden by default, so that we can display it
+        when we get actual data-->
+
+        <footer class="slds-card__footer slds-hide">
+            <slot name="footer" onslotchange={handleFooterChange}></slot>
+        </footer>
+    </div>
+</template>

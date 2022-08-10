@@ -1,0 +1,20 @@
+h1{
+    font-size: 30px;
+    color:red;
+}
+
+/* In the block below, we are able to apply style to the child host element,
+but it is not being applied to h1 tag of the child component as it is in Shadown DOM.
+Check video 67 at 6:00 minute if you like for better explanation.
+Later we are applying similar style as below via the child component, using the host property*/
+
+/* c-css-child-demo{  
+    display: block;
+    background-color: green;
+    color:white;
+} */
+
+p{
+    font-size: 20px;
+    color:yellow;
+}

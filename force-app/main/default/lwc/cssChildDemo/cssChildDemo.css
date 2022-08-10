@@ -1,0 +1,17 @@
+:host{
+    display: block;
+    background-color: purple;
+    color:white;
+}
+:host(.blue){
+    display: block;
+    background-color: blue;
+    color:white;
+} 
+
+/* The code block does not work because we can't apply style to those elements
+in the child component, that has been passed by the parent */
+/* p{
+    font-size: 20px;
+    color:yellow;
+} */

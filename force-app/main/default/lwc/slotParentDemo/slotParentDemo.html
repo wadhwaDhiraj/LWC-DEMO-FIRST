@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Slots Demo">
+        <c-slot-child-demo>
+            <p class="slds-text-color_success" slot="firstQuestion">I am Parent. My name is Phiraj</p>
+            <p  class="slds-text-color_error" slot="secondQuestion">I am Parent. My age is 28</p>
+            <p slot="footer">This is Footer.</p>
+        </c-slot-child-demo>
+    </lightning-card>
+    <lightning-card title="Slots Demo">
+        <c-slot-child-demo>
+            <p class="slds-text-color_success" slot="firstQuestion">I am Parent. My name is Phiraj</p>
+            <p  class="slds-text-color_error" slot="secondQuestion">I am Parent. My age is 28</p>
+            <!-- <p slot="footer">This is Footer.</p> -->
+            <!-- For some reason, even though we have commented the above footer slot
+                 it's still displaying the footer line, until we hide it using the
+                 slds-hide property in the actual child element -->
+        </c-slot-child-demo>
+    </lightning-card>
+</template>
