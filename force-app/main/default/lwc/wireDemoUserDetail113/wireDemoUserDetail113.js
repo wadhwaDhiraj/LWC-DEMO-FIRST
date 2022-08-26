@@ -10,7 +10,7 @@ export default class WireDemoUserDetail113 extends LightningElement {
     userDetail
     userDetail2   // was trying this on my own to test if wire is really reactive
 
-    @wire(getRecord, {recordId:'0056D000005SnH9QAK', fields})
+    @wire(getRecord, {recordId:'0055i000004dVJiAAM', fields})
     userDetailHandler({data, error}){
         if(data){
             this.userDetail = data.fields;
@@ -23,7 +23,7 @@ export default class WireDemoUserDetail113 extends LightningElement {
 
     }
 
-    @wire(getRecord, {recordId:'0056D000005SnH9QAK', fields})
+    @wire(getRecord, {recordId:'0055i000004dVJiAAM', fields})
     userDetailProperty;
 
     @wire(getRecord, {recordId:'$userId', fields})  // this doesn't work if userId is not preceded with '$'

@@ -15,7 +15,8 @@ export default class ThirdPartyFiles extends LightningElement {
 
     renderedCallback(){
         if(this.isLibraryLoaded){
-            return
+            console.log('check this code again')
+            this.isLibraryLoaded = true
         }
         else{
             Promise.all([
